@@ -1,0 +1,12 @@
+@model IDictionary<string, object>
+@{
+    ViewData["Title"] = "Отрицательный идентификатор";
+}
+<h2>Параметры метода Index (id < 0)</h2>
+<ul>
+@foreach (var param in Model)
+{
+    <li>@param.Key: @param.Value</li>
+}
+</ul>
+<a href="@Url.Action("Index", "Home")">Назад</a> 

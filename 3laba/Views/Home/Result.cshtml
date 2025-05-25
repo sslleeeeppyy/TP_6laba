@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Результат";
+}
+
+<h2>Введённые данные</h2>
+<ul>
+    <li>Идентификатор: @ViewBag.Id</li>
+    <li>ФИО эксперта: @ViewBag.Name</li>
+    <li>Отдел: @ViewBag.Department</li>
+    <li>Активен: @ViewBag.IsActive</li>
+    <li>Дата поступления: @ViewBag.Date</li>
+    <li>Дополнительное поле: @ViewBag.ExtraField</li>
+</ul>
+<a href="@Url.Action("Index", "Home")">Назад</a> 

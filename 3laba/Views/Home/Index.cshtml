@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Ввод данных отдела экспертизы";
+}
+
+<h2>Ввод данных отдела экспертизы</h2>
+<form asp-action="Index" method="post">
+    <div>
+        <label>Идентификатор (int, допускает null):</label>
+        @Html.TextBox("id", null, new { type = "number" })
+    </div>
+    <div>
+        <label>ФИО эксперта:</label>
+        @Html.TextBox("name")
+    </div>
+    <div>
+        <label>Отдел:</label>
+        @Html.TextBox("department")
+    </div>
+    <div>
+        <label>Активен:</label>
+        @Html.CheckBox("isActive")
+    </div>
+    <div>
+        <label>Дата поступления:</label>
+        @Html.TextBox("date", null, new { type = "date" })
+    </div>
+    <div>
+        <label>Дополнительное поле:</label>
+        @Html.TextBox("extraField")
+    </div>
+    <button type="submit">Отправить</button>
+</form>
